@@ -1,5 +1,4 @@
 const fetch = require('node-fetch')
-const fs = require('fs')
 
 const fetchTokens = async (id) => {
   const body = `query OriginalTokens {
@@ -74,7 +73,6 @@ exports.index = async (req, res) => {
     }
     req.templateValues.transferMap = transferMap
     req.templateValues.rows = Object.entries(transferMap).length
-    console.log(req.templateValues)
   }
 
   req.templateValues.elapsed = new Date().getTime() - startTime
