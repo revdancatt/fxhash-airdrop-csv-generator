@@ -1,0 +1,31 @@
+{
+  "name": "fxhash-airdrop-csv-generator",
+  "version": "1.0.0",
+  "description": "Grab tokens and IDs to create a CSV file for batch transfer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://revdancatt@github.com/revdancatt/fxhash-airdrop-csv-generator.git"
+  },
+  "author": "revdancatt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revdancatt/fxhash-airdrop-csv-generator/issues"
+  },
+  "homepage": "https://github.com/revdancatt/fxhash-airdrop-csv-generator#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "gradient-string": "^2.0.1",
+    "moment": "^2.29.3",
+    "node-fetch": "2.6.1"
+  }
+}

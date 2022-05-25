@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  {{> head}}
+</head>
+
+<body>
+  {{> nav}}
+
+  <section class="hero is-primary">
+    <div class="hero-body shader">
+      <div class="container">
+        <p class="title is-size-1 has-text-weight-bold mb-0">
+          fxhash Airdrop helper
+        </p>
+        <p class="subtitle has-text-weight-bold pt-5">
+          Helping you to move things from one place to another
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section has-background-white-ter" style="padding: 1rem 1.5rem">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li class="is-active"><a href="/" aria-current="page">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section has-background-white">
+    <div class="container">
+      <form>
+
+        <div class="field">
+          <label class="label">Send mints from project:</label>
+          <div class="control">
+            <input class="input" name="from" type="number" value="{{from.id}}">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">To owners of project:</label>
+          <div class="control">
+            <input class="input" name="to" type="number" value="{{to.id}}">
+          </div>
+        </div>
+        <button class="button is-link" type="submit">Go!</button>
+      </form>
+    </div>
+  </section>
+
+  {{#if from}}
+    <section class="section has-background-white">
+      <div class="container">
+        <p class="mb-4">
+          We want to air drop tokens from project: <strong>{{from.name}} (#{{from.id}})</strong> to the owners of
+          project:
+          <strong>{{to.name}} (#{{to.id}})</strong>.
+        </p>
+        <p class="mb-4">
+          This gives you a CSV in the format <code>target_address,token_id,amount</code> to copy and paste into <a
+            href="https://batch.xtz.tools/">https://batch.xtz.tools/</a>
+        </p>
+        <textarea class="textarea is-family-code" rows="{{rows}}">{{#each transferMap}}{{owner}},{{gentk}},1
+        {{/each}}
+        </textarea>
+      </div>
+    </section>
+
+    <section class="section has-background-white">
+      <div class="container">
+        <textarea class="textarea is-family-code" rows="{{rows}}">{{#each transferMap}}{{owner}},{{gentk}},1 - {{name}}
+        {{/each}}
+        </textarea>
+      </div>
+    </section>
+
+  {{/if}}
+
+  {{> footer}}
+</body>
+
+</html>
