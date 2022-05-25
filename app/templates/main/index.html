@@ -40,18 +40,19 @@
         </p>
 
         <div class="field">
-          <label class="label">Sending mints from project (id):</label>
+          <label class="label">Sending mints to owners of project (original project id):</label>
+          <div class="control">
+            <input class="input" name="to" type="number" value="{{to.id}}">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">From project (new project id):</label>
           <div class="control">
             <input class="input" name="from" type="number" value="{{from.id}}">
           </div>
         </div>
 
-        <div class="field">
-          <label class="label">To owners of project (id):</label>
-          <div class="control">
-            <input class="input" name="to" type="number" value="{{to.id}}">
-          </div>
-        </div>
         <button class="button is-link" type="submit">Create CSV</button>
       </form>
     </div>
