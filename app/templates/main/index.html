@@ -34,9 +34,13 @@
   <section class="section has-background-white">
     <div class="container">
       <form>
+        <p>
+          This will create chunk of CSV text that you then copy and use on <a
+            href="https://batch.xtz.tools/">https://batch.xtz.tools/</a>.
+        </p>
 
         <div class="field">
-          <label class="label">Send mints from project:</label>
+          <label class="label">Sending mints from project:</label>
           <div class="control">
             <input class="input" name="from" type="number" value="{{from.id}}">
           </div>
@@ -48,7 +52,7 @@
             <input class="input" name="to" type="number" value="{{to.id}}">
           </div>
         </div>
-        <button class="button is-link" type="submit">Go!</button>
+        <button class="button is-link" type="submit">Create CSV</button>
       </form>
     </div>
   </section>
